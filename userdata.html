@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form Results - Submitted User Data</title>
+
+</head>
+
+<body>
+    
+    <div class="results">
+    <h1>Thank You For Contacting!</h1>
+    <p>Your contact form has been submitted and is now processing, thank you!</p>
+    
+    <h3>Your Submitted Data:</h3>
+        
+    <div id="userdata"></div>
+    
+    <p><a href="index.html">Return to Home Page</a></p>
+    </div>
+    
+    <div id="userdata"></div>
+    <script>
+    const datalist = document.getElementById("userdata")
+    new URLSearchParams(window.location.search).forEach((value, name) => { datalist.append(`${name}: ${value}`)
+    datalist.append(document.createElement('br'))                                                   })                   
+    
+    </script>
+
+</body>
+
+
+
+
+
+
+</html>
